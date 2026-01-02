@@ -1,5 +1,8 @@
-pandas
-numpy
-matplotlib
-scikit-learn
-jupyter
+Pandas
+NumPy
+MySQL
+Excel
+Matplotlib
+Scikit-learn
+Jupyter-notebook
+Power bi
