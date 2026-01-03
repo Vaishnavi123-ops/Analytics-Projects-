@@ -1,0 +1,14 @@
+After completing the churn prediction model, I did not directly trust the model based on accuracy. So I decided to evaluate how the model behaves in real business situations.
+
+First, I observed the dataset and noticed that churn customers are fewer compared to non-churn customers. Because of this imbalance, I understood that accuracy may look high even if the model fails to detect churn properly. This made me focus more on recall and confusion matrix instead of accuracy alone.
+
+Next, I evaluated the model using confusion matrix. From the results, I observed that a significant number of churn customers were missed (false negatives).I realized that missing a churn customer is a serious problem because the business loses revenue and there is no second chance to retain that customer. On the other hand, falsely warning a loyal customer only causes extra effort.
+
+After analyzing these mistakes, I performed my first experiment by adjusting the decision threshold. I tested different threshold values instead of using the default value. Lowering the threshold helped in catching more churn customers and improved recall, although it slightly increased false positives. From this experiment, I observed that threshold tuning is important for business-critical problems.
+
+Then I performed the second experiment using cost-based evaluation. I assigned a higher cost to false negatives compared to false positives to reflect real business risk.
+When I compared different thresholds using this cost calculation, I found that the threshold-adjusted model resulted in lower overall business loss, even when accuracy was slightly lower.
+
+Based on both experiments, I evaluated the trust level of the model. I concluded that the model should not be fully trusted for automated decisions. However, it can be partially trusted as a decision-support tool to highlight risky customers. Human review is still required to avoid losing valuable customers.
+
+This evaluation helped me understand that AI models should be judged based on mistakes, business impact, and trust, not only on accuracy values.
