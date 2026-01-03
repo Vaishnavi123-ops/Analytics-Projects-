@@ -1,0 +1,8 @@
+Pandas
+NumPy
+MySQL
+Excel
+Matplotlib
+Scikit-learn
+Jupyter-notebook
+Power bi
