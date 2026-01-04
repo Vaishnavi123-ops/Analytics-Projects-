@@ -1,0 +1,20 @@
+Resume Screening & Fairness Analysis – Project Results
+
+Many companies use AI systems to screen resumes and shortlist candidates. This project focuses on checking whether a resume screening model treats candidates fairly or not.
+
+The dataset used contains resume information such as skills, education, years of experience, certifications, and recruiter decisions. There are no direct attributes like gender or age in the dataset.
+However, education level and work experience can still cause indirect bias, so these attributes were used for fairness analysis.
+
+A basic classification model was built using Logistic Regression. The purpose of this model was not to improve accuracy, but to generate selection results so that fairness could be analyzed.
+
+The confusion matrix results are as follows:
+- Correctly selected candidates: 154
+- Correctly rejected candidates: 24
+- Wrongly selected candidates: 14
+- Wrongly rejected candidates: 8
+
+After observing the model results, fairness analysis was performed based on education level and years of experience. The analysis showed that candidates with more experience compared to education were selected more often compared to others. This indicates that the resume screening system may be biased.
+
+Such bias is unfair to candidates because qualified people may get rejected due to bias instead of lack of skills. It is also bad for the company because talented candidates can be missed. In real hiring situations, biased screening can also create legal and ethical problems and can harm the company’s reputation.
+
+This project shows why it is important to check fairness in AI-based resume screening systems before using them in real recruitment processes.
